@@ -8,8 +8,7 @@
 :numbered:
 
 = Übersicht
-Version {version}
-Markus von Rüden
+:author: Markus von Rüden
 
 `Q's Train Project` (QTP) dient dazu einen Zug-Fahrbetrieb zu simulieren.
 Dabei gilt es Hard- und Softwarekomponenten aufeinander abzustimmen und einen möglichst automatisierten Betrieb zu
@@ -18,15 +17,135 @@ Der "echte" Zugebetrieb wird dabei von LEGO-Modellen simuliert.
 Dieses Projekt beschäftigt sich mit allen auftretenden Fragen und Problemen welche sich dabei ergeben.
 
 == Verwendete Techniken
-Die Dokumentation wurde mit link:http://asciidoctor.org[Asciidoctor] erstellt.
+Die Dokumentation ist mit link:http://asciidoctor.org[Asciidoctor] erstellt.
 
 == Inhalte
 
- * TODO...
+=== Materialien
+
+Zur Verfügung stehen folgende LEGO Materialien:
+
+ * 1x LEGO ICE (link:http://www.amazon.de/Lego-60051-City-Hochgeschwindigkeitszug/dp/B00HFPM3IK[60051])
+ * 1x LEGO S-Bahn (link:http://www.amazon.de/Lego-4568048-LEGO-City-7938/dp/B003A2JCQ8/ref=sr_1_6?ie=UTF8&qid=1416519366&sr=8-6&keywords=lego+zug[7938])
+ * 52x LEGO Schiene gerade (link:http://cache.lego.com/media/bricks/5/2/4279714.jpg[4279714])
+ * 97x LEGO Schiene gebogen (link:http://cache.lego.com/media/bricks/5/2/4279717.jpg[4279717])
+ * 4x LEGO Weiche rechts (link:http://cache.lego.com/media/bricks/5/2/4516101.jpg[4516101])
+ * 4x LEGO Weiche links (link:http://cache.lego.com/media/bricks/5/2/4516092.jpg[4516092])
+ * einige LEGO Schienen flexibel (link:http://cache.lego.com/media/bricks/5/2/4535745.jpg[4535745])
+
+Des Weiteren stehen zur Verfügung:
+
+    * ein link:http://raspberrypi.org[Raspberry PI]
+    * ein LEGO Mindstorms NXT
+
+=== Streckenaufbau
+
+Zu Beginn wird ein einfacher Streckenaufbau gewählt, welcher mindestens die folgenden Kriterien erfüllt:
+
+ * eine Weiche verbaut
+ * alle Streckenabschnitte bilden einen Kreis
+
+Denkbar wäre folgender Streckenaufbau:
+
+image:http://www.duplo-schienen.de/duplo-schienen.de-Beispiel21-Oval-grossem-Aussengleis.png[]
+Quelle: http://www.duplo-schienen.de
+
+=== Anforderungen
+
+Dieser Abschnitt enthält alle Anforderungen, welche es zu erfüllen gilt.
+Anfangs sind diese eher Ideen als konkrete Anforderungen.
+Mit Fortschritt des Projekts ändern sich die Anforderungen ggf.
+Lösungen werden anschließend vorgestellt und dokumentiert.
+
+==== Ansteuern der Weichen
+
+Über ein Schaltpult (Software oder Hardware, spielt keine Rolle) werden die beiden Weichen umgeschaltet.
+Ein manuelles Umschalten an der Weiche selbst durch den Benutzer ist nicht gestattet.
+
+Folgende Informationen können hilfreich sein:
+
+ * http://xn--jkel-loa.info/15.html --> 9V Weiche, ggf. Anpassungen notwendig. Weiche wird verändert.
+ * https://www.youtube.com/watch?v=o-S8ZbZiMNo&feature=relmfu&app=desktop --> sehr kleine Lösung, aber wohl auch Modifizierung an Weiche notwendig.
+ * http://www.mikrocontroller.net/topic/292609 --> Interessanter Beitrag
+ * http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=243726
+ * http://www.tausendsteine.de/de/gemeinschaft/forum/?entry=1&id=301222&PHPSESSID=0a02e9eca570cf839209e3ad27557c00
+ * http://www.mikrocontroller.net/topic/269954
+ * http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=305552#id305552
+ * Weitere Beiträge über Suchbegriffe wie "LEGO Weiche elektrisch ansteuern"
+
+==== Positionsbestimmung eines Zugs
+
+Ein Zug fährt über die Strecke und am Schaltpult/im Kontrollzentrum ist ersichtlich wo sich der Zug befindet.
+
+Hier sind mehrere Ansätze möglich:
+
+ * RFID/NFC
+ * Magnete im "Gleisbett"
+ * Lichtschranke am Gleis/Zug
+ * Kombination aus allem
+ * Barcodescanner am Zug und Barcodes am Gleis
+ * Farbsensor am Zug und Farbcode am Gleis
+ * Weitere Beiträge über Suchbegriff wie "Gleisbesetztmelder Modelleisenbahn".
+
+Artikelsammlung:
+
+ * http://www.foerstemann.name/lgb/computer/lgb_konzept.pdf
+ * http://www.railware.de/doku/tiki-index.php?page=Doku4+Zugidentifikation+mit+Helmo+System
+ * http://www.railware.de/doku/tiki-index.php?page=Doku4+R%C3%BCckmeldung+Wie+und+Wo
+ * http://www.firma-staerz.de/LEGO/Digitalisierung_des_LEGO_9V-Systems.pdf
+
+==== Streckenabschnitte
+
+Die Strecke wird in Abschnitte eingeteilt.
+Auf dem Schaltpult/im Kontrollzentrum ist zu sehen welcher Abschnitt zur Zeit von welchem Zug belegt wird.
+
+Ein Zug welcher in einen "gesperrten" Abschnitt fährt wird automatisch gestoppt.
+Ein Weiterfahren dieses Zugs ist nicht mehr möglich. Er muss "resettet" werden (z.B. Aus- und wieder Einschalten)
+
+Interessante Information zu einer möglchen Lösung:
+
+ * http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=318552#id318552
+
+==== Richtungsbestimmung
+
+Es ist auf dem Schaltpult/im Kontrollzentrum ersichtlich in welche Richtung ein Zug fährt.
+
+==== Geschwindigkeitsbegrenzung
+
+Auf der Strecke herschen unterschiedliche Geschwindigkeitsbegrenzungen (z.B. keine, 80%, 50%, usw., ggf. auch absolut).
+
+
+==== Waren
+
+Ein Computerprogramm simuliert "Waren" in Form von Passagieren, Kohle, Güter, Nahrung, Tiere, Autos, usw.
+
+Es gibt mehrere Bahnhöfe. Jeder Bahnhof produziert und konsumiert Waren.
+
+Ein Zug kann Waren transportieren (z.B. Kohle).
+
+Hält ein Zug an einem Bahnhof, werden Waren be- und entladen (sofern vorhanden).
+
+==== Vollautomatischer Betrieb
+
+Der Zugbetrieb ist vollständig automatisiert.
+Ein manuelles Eingreifen ist nicht mehr notwendig (vll. sogar möglich?)
+
+
+==== Mehr von Allem
+
+ * Betrieb auch mit Autos, LKWs, mehr Züge, längere Züge
+ * Noch mehr Züge
+ * Bahnübergänge
+ * Lichtsteuerung (im Zug, auf der Strecke)
+ * Kamerasteuerung (im Zug, auf der Strecke)
+ * Audiowiedergabe (im Zug, auf der Strecke)
+ * usw....
 
 
 == Ausschlusserklärung
 LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch weder gesponsert noch autorisiert oder unterstützt werden.
+
+Alle Logos, Hersteller- und Produktnamen sind Warenzeichen ihrer jeweiligen Hersteller.
 
 == Lizenz
 image:https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png[alt="Creative Commons Lizenzvertrag", link="http://creativecommons.org/licenses/by-nc-sa/4.0/"]

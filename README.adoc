@@ -1,0 +1,34 @@
+// Global settings
+:ascii-ids:
+:encoding: UTF-8
+:lang: de
+:icons: font
+:toc: left
+:toclevels: 8
+:numbered:
+
+= Übersicht
+Version {version}
+Markus von Rüden
+
+`Q's Train Project` (QTP) dient dazu einen Zug-Fahrbetrieb zu simulieren.
+Dabei gilt es Hard- und Softwarekomponenten aufeinander abzustimmen und einen möglichst automatisierten Betrieb zu
+ermöglichen.
+Der "echte" Zugebetrieb wird dabei von LEGO-Modellen simuliert.
+Dieses Projekt beschäftigt sich mit allen auftretenden Fragen und Problemen welche sich dabei ergeben.
+
+== Verwendete Techniken
+Die Dokumentation wurde mit link:http://asciidoctor.org[Asciidoctor] erstellt.
+
+== Inhalte
+
+ * TODO...
+
+
+== Ausschlusserklärung
+LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch weder gesponsert noch autorisiert oder unterstützt werden.
+
+== Lizenz
+image:https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png[alt="Creative Commons Lizenzvertrag", link="http://creativecommons.org/licenses/by-nc-sa/4.0/"]
+
+Dieses Werk ist lizenziert unter einer link:http://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz]

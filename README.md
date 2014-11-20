@@ -7,12 +7,21 @@ ermöglichen.
 
 Der "echte" Zugebetrieb wird dabei von LEGO-Modellen simuliert.
 
-Dieses Projekt beschäftigt sich um alle auftretenden Fragen und Problemen welche sich dabei ergeben.
+Dieses Projekt beschäftigt sich mit allen auftretenden Fragen und Problemen welche sich dabei ergeben.
+
+Verwendete Techniken
+====
+Die Dokumentation wurde mit <a href="http://asciidoctor.org">Asciidoctor</a> erstellt.
+
+Inhalte
+====
+
+ * TODO...
 
 
 Ausschlusserklärung
 =====
-LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch weder gesponsert noch autorisiert oder unterstützt wird.
+LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch weder gesponsert noch autorisiert oder unterstützt werden.
 
 Lizenz
 ======

@@ -148,6 +148,9 @@ LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch
 Alle Logos, Hersteller- und Produktnamen sind Warenzeichen ihrer jeweiligen Hersteller.
 
 == Lizenz
+
+Copyright (c) 2014 Markus von Rüden
+
 image:https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png[alt="Creative Commons Lizenzvertrag", link="http://creativecommons.org/licenses/by-nc-sa/4.0/"]
 
 Dieses Werk ist lizenziert unter einer link:http://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz]

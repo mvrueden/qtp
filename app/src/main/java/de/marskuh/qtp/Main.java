@@ -1,7 +1,6 @@
 package de.marskuh.qtp;
 
 import de.marskuh.qtp.view.MainFrame;
-import javafx.application.Application;
 
 import javax.swing.*;
 import java.io.IOException;

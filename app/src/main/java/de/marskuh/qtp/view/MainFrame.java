@@ -1,17 +1,12 @@
 package de.marskuh.qtp.view;
 
 import de.marskuh.qtp.ImageManager;
-import de.marskuh.qtp.Main;
-import de.marskuh.qtp.model.Part;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.BufferedImage;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Objects;
 
 // TODO we have to check the license of logo.png --> it is from findicons.com
 public class MainFrame extends JFrame {

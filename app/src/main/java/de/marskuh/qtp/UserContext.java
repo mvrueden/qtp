@@ -2,7 +2,6 @@ package de.marskuh.qtp;
 
 import de.marskuh.qtp.model.Part;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 

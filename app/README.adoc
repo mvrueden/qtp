@@ -1,0 +1,9 @@
+= TODO
+
+Anwendung um den späteren Gleisplan zu visualisieren.
+Dabei geht es weniger darum eine Anwendung für Gleispläne zu erstellen, sondern den Zustand des Gesamtsystems zu visualisieren:
+
+ * Welche Gleise sind belegt
+ * Wo befindet sich der Zug
+ * Live-Bild des Zugs/der Anlage
+ * Steuerung von Zug 1, usw...

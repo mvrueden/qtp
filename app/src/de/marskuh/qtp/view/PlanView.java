@@ -6,25 +6,16 @@ import de.marskuh.qtp.UserContext;
 import de.marskuh.qtp.model.Part;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.*;
 
 
-// TODO fix flickering while dragging. This might help: http://stackoverflow.com/questions/1033703/swing-how-can-i-prevent-flickering-and-vibrating-of-a-component-when-restric
 // TODO remove unused imports
 public class PlanView extends JPanel {
 
     private PlanController planController = new PlanController();
-
-    public static class UiUtils {
-
-        public static Container findRootComponent(Container anyContainer) {
-            while (anyContainer.getParent() != null) {
-                anyContainer = anyContainer.getParent();
-            }
-            return anyContainer;
-        }
-    }
 
     private static class PlanController {
 
@@ -124,13 +115,6 @@ public class PlanView extends JPanel {
             if (component != null) {
                 component.setBorder(BorderFactory.createLineBorder(Color.RED));
                 component.requestFocusInWindow();
-            }
-        }
-
-        private void remove(JLabel component) {
-            if (component != null) {
-//                getContentPane().remove(component);
-//                repaint();
             }
         }
     }

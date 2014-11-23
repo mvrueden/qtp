@@ -57,7 +57,7 @@ public class PartView extends JPanel {
 
     public PartView() {
         setBackground(Color.YELLOW);
-        setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), "DUMMY"));
+        setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), "Schienen"));
 
         for (Part eachPart : partViewModel.getParts()) {
             PartComponent partComponent = new PartComponent(eachPart, 100, 50);

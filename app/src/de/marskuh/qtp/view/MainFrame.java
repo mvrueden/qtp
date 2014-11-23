@@ -7,10 +7,7 @@ import de.marskuh.qtp.model.Part;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,14 +30,17 @@ public class MainFrame extends JFrame {
     public MainFrame(ImageManager imageManager) throws IOException {
         setTitle("Q's Train Simulator");
         setIconImage(imageManager.getImage(de.marskuh.qtp.ImageManager.Image.Logo));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         init();
         pack();
+        setLocationRelativeTo(null); // center
     }
 
     private void init() throws IOException {
         JSplitPane mainPanel = new JSplitPane();
         mainPanel.setBackground(Color.CYAN);
+        mainPanel.setDividerLocation(0.75);
+        mainPanel.setResizeWeight(1.0);
 
         planView = new PlanView();
         partView = new PartView();
@@ -54,13 +54,15 @@ public class MainFrame extends JFrame {
         add(toolbar, BorderLayout.NORTH);
         add(footerView, BorderLayout.SOUTH);
 
-    }
-
-    private JLabel createTrackLabel(Part part) throws IOException {
-        InputStream inputStream = Main.class.getResourceAsStream("/" + part.getImage());
-        Objects.requireNonNull(inputStream, "Image " + part.getImage() + " not found.");
-        BufferedImage trackImage = ImageIO.read(inputStream);
-        JLabel picLabel = new JLabel(new ImageIcon(trackImage));
-        return picLabel;
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int result = JOptionPane.showConfirmDialog(MainFrame.this, "Möchtest du die Anwendung wirklich beenden?", "Wirklich beenden?", JOptionPane.YES_NO_OPTION);
+                if (result == JOptionPane.OK_OPTION) {
+                    MainFrame.this.dispose();
+                    System.exit(0);
+                }
+            }
+        });
     }
 }

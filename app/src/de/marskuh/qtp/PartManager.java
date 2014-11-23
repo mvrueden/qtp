@@ -10,10 +10,10 @@ public class PartManager {
     private List<Part> parts = new ArrayList<>();
 
     public PartManager() {
-        parts.add(createPart("2859.8.gif", 279, 166));
-        parts.add(createPart("2861.8.gif", 279, 166));
-        parts.add(createPart("2865.8.gif", 136, 64));
-        parts.add(createPart("2867.8.gif", 139, 86));
+        parts.add(createPart("gate-right.gif", 279, 166));
+        parts.add(createPart("gate-left.gif", 279, 166));
+        parts.add(createPart("straight.gif", 136, 64));
+        parts.add(createPart("curve.gif", 139, 86));
     }
 
     // TODO separate track data and track view (e.g. load all parts while starting up)

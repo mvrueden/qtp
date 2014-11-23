@@ -71,7 +71,12 @@ Folgende Informationen können hilfreich sein:
  * http://www.tausendsteine.de/de/gemeinschaft/forum/?entry=1&id=301222&PHPSESSID=0a02e9eca570cf839209e3ad27557c00
  * http://www.mikrocontroller.net/topic/269954
  * http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=305552#id305552
- * Weitere Beiträge über Suchbegriffe wie "LEGO Weiche elektrisch ansteuern"
+ * http://www.forum.hobbyelektronik.de/forum/messages/62018.htm
+ * http://www.eurobricks.com/forum/index.php?showtopic=52106
+ * http://www.brickshelf.com/cgi-bin/gallery.cgi?f=434012
+ * Weitere Beiträge über Suchbegriffe wie
+    * LEGO Weiche elektrisch ansteuern
+    * lego weichen stellmotor
 
 ==== Positionsbestimmung eines Zugs
 

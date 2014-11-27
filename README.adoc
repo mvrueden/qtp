@@ -59,9 +59,46 @@ Lösungen werden anschließend vorgestellt und dokumentiert.
 
 ==== Ansteuern der Weichen
 
-Über ein Schaltpult (Software oder Hardware, spielt keine Rolle) werden die beiden Weichen umgeschaltet.
+Über ein Schaltpult (Software oder Hardware) werden die Weichen umgeschaltet.
+Die Weiche darf nicht modifiziert werden (z.B. entfernen der Feder).
 Ein manuelles Umschalten an der Weiche selbst durch den Benutzer ist nicht gestattet.
 
+===== Prototyp 1, LEGO Mindstorms NXT
+
+Der erste Prototyp ist mit Hilfe von LEGO Mindstorms realisiert worden.
+Der Aufbau ist sehr einfach gehalten.
+
+Die beiden Schalter dienen zur Ansteuerung, des Motors.
+Der Schalter rechts stellt die Weiche auf Durchfahrt.
+Der Schalter links stellt die Weiche auf "gebogener Zweig".
+
+Beim Drücken eines Schalters, wird der Motor mit einer Kraft von `50%` für `0,25 Sekunden` `vorwärts/rückwärts` angesteuert und `bremst` anschließend.
+
+.LEGO Mindstorms NXT steuert Weiche
+image:1_WeichenSchalter_Lego-Mindstorms-NXT.png[]
+
+*Gewonnene Erkenntnisse*
+
+ * die Kraft des verwendeten Motors reicht aus,
+ * es existieren sogar noch Reserven
+
+*Vorteile*
+
+ * es werden nur LEGO-Steine verwendet
+ * einfache Software-Lösung
+ * simple Baukonstruktion
+
+*Nachteile*
+
+ * "klobige" Baukonstruktion
+ * nur drei Weichen ansteuerbar (es existieren nur drei Motoren)
+
+*Downloads*
+
+ * link:1_WeichenSchalter_Lego-Mindstorms-NXT.rbt[Quellcode (.rbt-Datei)]
+ * link:1_WeichenSchalter_Lego-Mindstorms-NXT.lxf[Bauplan (.lxf-Datei)]
+
+===== Weiterführendes Material
 Folgende Informationen können hilfreich sein:
 
  * http://xn--jkel-loa.info/15.html --> 9V Weiche, ggf. Anpassungen notwendig. Weiche wird verändert.
@@ -148,6 +185,8 @@ LEGO® ist eine Marke der LEGO Gruppe, durch die die vorliegenden Inhalte jedoch
 Alle Logos, Hersteller- und Produktnamen sind Warenzeichen ihrer jeweiligen Hersteller.
 
 == Lizenz
+Copyright (c) 2014, Markus von Rüden.
+
 image:https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png[alt="Creative Commons Lizenzvertrag", link="http://creativecommons.org/licenses/by-nc-sa/4.0/"]
 
 Dieses Werk ist lizenziert unter einer link:http://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz]

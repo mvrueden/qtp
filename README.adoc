@@ -62,6 +62,42 @@ Lösungen werden anschließend vorgestellt und dokumentiert.
 Über ein Schaltpult (Software oder Hardware, spielt keine Rolle) werden die beiden Weichen umgeschaltet.
 Ein manuelles Umschalten an der Weiche selbst durch den Benutzer ist nicht gestattet.
 
+===== Prototyp 1, LEGO Mindstorms NXT
+
+Der erste Prototyp ist mit Hilfe von LEGO Mindstorms realisiert worden.
+Der Aufbau ist sehr einfach gehalten.
+
+Die beiden Schalter dienen zur Ansteuerung, des Motors.
+Der Schalter rechts stellt die Weiche auf Durchfahrt.
+Der Schalter links stellt die Weiche auf "gebogener Zweig".
+
+Beim Drücken eines Schalters, wird der Motor mit einer Kraft von `50%` für `0,25 Sekunden` `vorwärts/rückwärts` angesteuert und `bremst` anschließend.
+
+.LEGO Mindstorms NXT steuert Weiche
+image:1_WeichenSchalter_Lego-Mindstorms-NXT.png[]
+
+*Gewonnene Erkenntnisse*
+
+ * die Kraft des verwendeten Motors reicht aus,
+ * es existieren sogar noch Reserven
+
+*Vorteile*
+
+ * es werden nur LEGO-Steine verwendet
+ * einfache Software-Lösung
+ * simple Baukonstruktion
+
+*Nachteile*
+
+ * "klobige" Baukonstruktion
+ * nur drei Weichen ansteuerbar (es existieren nur drei Motoren)
+
+*Downloads*
+
+ * link:1_WeichenSchalter_Lego-Mindstorms-NXT.rbt[Quellcode (.rbt-Datei)]
+ * link:1_WeichenSchalter_Lego-Mindstorms-NXT.lxf[Bauplan (.lxf-Datei)]
+
+===== Weiterführendes Material
 Folgende Informationen können hilfreich sein:
 
  * http://xn--jkel-loa.info/15.html --> 9V Weiche, ggf. Anpassungen notwendig. Weiche wird verändert.

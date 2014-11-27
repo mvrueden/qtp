@@ -59,7 +59,8 @@ Lösungen werden anschließend vorgestellt und dokumentiert.
 
 ==== Ansteuern der Weichen
 
-Über ein Schaltpult (Software oder Hardware, spielt keine Rolle) werden die beiden Weichen umgeschaltet.
+Über ein Schaltpult (Software oder Hardware) werden die Weichen umgeschaltet.
+Die Weiche darf nicht modifiziert werden (z.B. entfernen der Feder).
 Ein manuelles Umschalten an der Weiche selbst durch den Benutzer ist nicht gestattet.
 
 ===== Prototyp 1, LEGO Mindstorms NXT

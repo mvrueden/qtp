@@ -131,6 +131,47 @@ Artikelsammlung:
  * http://www.railware.de/doku/tiki-index.php?page=Doku4+R%C3%BCckmeldung+Wie+und+Wo
  * http://www.firma-staerz.de/LEGO/Digitalisierung_des_LEGO_9V-Systems.pdf
 
+===== Prototyp 1, RFID 125 Khz
+
+Auf der Strecke werden mehrere 125 Khz RFID-Tags verteilt.
+Ein RFID-Lesegerät wird im LEGO-Zug verbaut und ließt die Karte beim Überfahren aus.
+
+Aufgrund der geringen Baugröße (3,8 x 1,8 x 1,2cm) wurde ein _125Khz RFID RDM6300 - UART_-Lesegerät verwendet.
+
+Ein Auslesen von 125 Khz Tags bei Stillstand des Zuges hat problemlos geklappt.
+Im fahrenden Betrieb (auch bei Langsamfahrt) war ein Auslesen der RFID-Tags nicht mehr möglich.
+
+
+*Gewonnene Erkenntnisse*
+
+ * Das RFID-Lesegerät ließt 125 Khz Tags bei Stillstand des Zuges
+ * Ein Auslesen eines Tags im Fahrtbetrieb ist nicht möglich
+
+.RDM6300 RFID 125Khz Lesegerät
+image:RDM6300.jpg[]
+
+===== Prototyp 1, RFID 13,56 MHz
+
+Auf der Strecke werden mehrere 13,56 Mhz RFID-Tags verteilt.
+Ein RFID-Lesegerät wird im LEGO-Zug verbaut und ließt die Karte beim Überfahren aus.
+
+Als Lesegerät wurde ein _MIFARE RC522_-Modul verwendet.
+
+Ein Auslesen von 13,56 Mhz RFID-Tags hat sowohl bei Stillstand und während der Fahrt des Zuges funktioniert.
+Aufgrund der größeren Baugröße (4,0 x 6,0 cm) war ein dezentes Verbauen im Zug nicht möglich.
+
+*Gewonnene Erkenntnisse*
+
+ * Das RFID-Lesegerät ließt 13,56 Mhz Tags sowohl bei Stillstand als auch während der Fahrt des Zuges
+ * Die Baugröße dieses Moduls ist zu groß
+
+*Nächste Schritte*
+
+ * Es wird ein weiteres 13,56 Mhz RFID-Lesegerät mit geringerer Baugröße ausprobiert
+
+.RC522 RFID 13,56 Mhz Lesegerät
+image:RC522.jpg[]
+
 ==== Streckenabschnitte
 
 Die Strecke wird in Abschnitte eingeteilt.

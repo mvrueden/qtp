@@ -98,6 +98,101 @@ image:1_WeichenSchalter_Lego-Mindstorms-NXT.png[]
  * link:1_WeichenSchalter_Lego-Mindstorms-NXT.rbt[Quellcode (.rbt-Datei)]
  * link:1_WeichenSchalter_Lego-Mindstorms-NXT.lxf[Bauplan (.lxf-Datei)]
 
+===== Prototyp 2, Micro Servo
+
+Der zweite Prototyp ist mit einem Micro Servo Motor realisiert.
+Dabei kam der Motor _Mystery Micro Servo 9g SD90_ zum Einsatz.
+Zur Ansteuerung des Servo-Motors wird ein link:http://www.raspberrypi.org/products/model-b-plus/[Raspberry Pi B+] verwendet.
+
+*Technische Daten SD90 9g* footnote:[http://www.tradesoon.com/pro-cate/toys/electrical-toys/mystery-sd90-servo-for_3439023.htm]
+[horizontal]
+ * Speed: 0.12 second/60 degrees rotation
+ * Torque: 1.3kg @ 4.8V~6V power
+ * Comes with full ranged connectivity accessories and mounting screws
+ * Dimensions: 53.6 mm x 52.4 mm x 12.5 mm
+ * Weight: 24g
+
+Der Motor wird mittels Pulsweitenmodulation (PWM) footnote:[http://www.mikrocontroller.net/articles/Pulsweitenmodulation] mit einer Frequenz von 50 Hz (entspricht einer Periodendauer von 20ms) angesteuert.
+Die manuelle Vermessung ergab folgende Wertetabelle:
+
+[cols="3", options="header"]
+:===
+ms:°:%
+0,00:X:0
+0,10:X:0,5
+0,20:X:1
+*0,30*:*0*:*1,5*
+*0,65*:*30*:*3,25*
+*1,00*:*60*:*5*
+*1,35*:*90*:*6,75*
+*1,70*:*120*:*8,5*
+*2,05*:*150*:*10,25*
+*2,40*:*180*:*12*
+10,00:X:50
+15,00:X:75
+20,00:X:100
+:===
+
+X = nicht möglich
+
+
+Zur Befestigung des Micro-Servo-Motors an der LEGO Weiche wurde eine Basis-Plattform aus LEGO-Steinen realisiert.
+Anschließend muss der Motor in der richtigen Höhe auf die LEGO Basis-Plattform geklebt werden.
+Wichtig dabei ist, dass die Achse des Motors mit der Achse des LEGO Weichenhebels auf einer Linie ist.
+Daraus ergibt sich eine Höhe von 8 mm.
+Die Höhe der LEGO Basisplattform entspricht 6 mm.
+Um die fehlenden 2 mm zu überbrücken wurde eine abgelaufene Bahn-Card mit 1 mm Höhe zurechtgeschnitten und auf die Basis-Plattform geklebt.
+Anschließend kann der Motor aufgeklebt werden.
+
+Der einfache Motorhebel wird an einem Ende abgeschnitten und mittig (90° Position) angebracht.
+
+Damit eine physikalische Verbindung zwischen Motor und Weichenhebel besteht wird eine Heftzwecke durch das oberste Loch des Schalthebels gesteckt und ebenfalls verklebt.
+
+Anschließend wurden die zwei Winkel bestimmt um die Weiche zu stellen:
+
+ * 50°
+ * 120°
+
+*Gewonnene Erkenntnisse*
+
+ * Die Kraft des verwendeten Motors bei 5V Versorgungsspannung reicht aus
+
+*Nächste Schritte*
+
+ * Verwendung mehrerer Motoren/Weichen
+ * Erstellen eines CLI (Command Line Interfaces) zur gezielten Ansteuerung einer Weiche, z.B. _schalte weiche1 1_ für durchfahrt.
+ * Bereitstellen eines GEhäuses um die "Elektronik" zu verstecken bzw. zu schützen.
+
+*Probleme*
+
+Einige Weichen ließen sich problemlos steuern, andere wiederum nicht, da diese sehr schwer zu stellen waren.
+Mithilfe von WD40 ist dem aber beizukommen.
+
+
+.LEGO Basis-Plattform
+image:2_WeichenSchalter_Servo_Plattform.png[]
+
+.Micro-Servo auf LEGO Basis-plattform
+image:2_WeichenSchalter_Servo_Motor1.png[]
+
+.Micro-Servo mitgelieferte Teile
+image:2_WeichenSchalter_Servo_Motor2.png[]
+
+.Micro Servo an Weiche 1
+image:2_WeichenSchalter_Servo_Gesamt1.png[]
+
+.Micro Servo an Weiche 2
+image:2_WeichenSchalter_Servo_Gesamt2.jpg[]
+
+.Micro Servo an Weiche 3
+image:2_WeichenSchalter_Servo_Gesamt3.jpg[]
+
+*Downloads*
+
+ * link:2_WeichenSchalter_Servo_Plattform.lxf[Bauplan LEGO Basis-Plattform (.lxf-Datei)]
+ * link:code/weichenschalter.py[Python Quellcode zur Weichensteuerung]
+
+'''
 ===== Weiterführendes Material
 Folgende Informationen können hilfreich sein:
 

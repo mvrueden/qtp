@@ -245,7 +245,7 @@ Im fahrenden Betrieb (auch bei Langsamfahrt) war ein Auslesen der RFID-Tags nich
 .RDM6300 RFID 125Khz Lesegerät
 image:RDM6300.jpg[]
 
-===== Prototyp 1, RFID 13,56 MHz
+===== Prototyp 2, RFID 13,56 MHz
 
 Auf der Strecke werden mehrere 13,56 Mhz RFID-Tags verteilt.
 Ein RFID-Lesegerät wird im LEGO-Zug verbaut und ließt die Karte beim Überfahren aus.
